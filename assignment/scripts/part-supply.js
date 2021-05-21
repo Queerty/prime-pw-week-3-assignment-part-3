@@ -32,26 +32,25 @@ console.log(supplyChanges);
 console.log('6. Showing supplyChanges...');
 
 for (i = 0; i<(supplyChanges.length); i++){
-
   if(supplyChanges[i]>0){
-    console.log('added', supplyChanges[i], 'parts.')}
-     else if (supplyChanges[i]<0) {console.log('Part count', supplyChanges[i], ".")
-}else {
-}
-}
+     console.log('Added', supplyChanges[i], 'parts.')
+  }  else if (supplyChanges[i]<0) {console.log('Part count', supplyChanges[i], ".")
+  }  else {
+  }
+  }
 // STRETCH GOALS
 console.log('---  Stretch Goals  ---');
 // 7. Rewrite the `for` loop from #6 as a `for of` loop.
 console.log('7. Showing supplyChanges with "for of" loop');
+
 for (parts of supplyChanges){
   console.log(parts);
-
 }
 
 // 8. Rewrite the `for` loop from #6 as a `while` loop.
 
 console.log('8. Showing supplyChanges with "while" loop');
-var i= 0;
+i= 0;
 const max= supplyChanges.length;
 while( i < max){
   console.log( supplyChanges[i]);
@@ -64,7 +63,8 @@ while( i < max){
 //I am trying to create a variable 'sum' to add all the array items to, but it doesn't seem to be working-
 //when I declare it in the for loop it says it isn't defined,
 //and when I declare it before my for loop it defaults that value (0) when I console.log after the function
-
+//FIX I ended up getting through this by fixing my "for of" loop- I had used (supplyChanges of supplyChanges)
+//which must have messed with the vaiable for its use after that block
 console.log('9. Total supplies available is:');
 let sum = 0;
   for (i = 0; i< supplyChanges.length; i++){
